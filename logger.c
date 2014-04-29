@@ -32,7 +32,7 @@ int logger_log(char*filename,int line,char* level,FILE* fp,char* logmessage,...)
 	ret =fprintf(fp,"%s %-7s %s %d %s\n",time,level,filename,line,logmessage);
 	if(ret < 1) 
 	{
-		perror("Could not write to lof file");
+		perror("Could not write to log file");
 	}
 	return ret;
 }
